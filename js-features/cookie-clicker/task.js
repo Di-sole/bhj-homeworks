@@ -1,12 +1,12 @@
 'use strict'
 
 const cookieImage = document.getElementById('cookie');
-const clickRate = document.getElementById('clicker__rate');
-const numberOfClicks = document.getElementById('clicker__counter');
 let resentClickTime = new Date().getTime();;
 
 cookieImage.onclick = function() {
     const clickTime = new Date().getTime();
+    const numberOfClicks = document.getElementById('clicker__counter');
+    const clickRate = document.getElementById('clicker__rate');
 
     ++numberOfClicks.textContent;
     cookieImage.width === 200 ? cookieImage.width = 170 : cookieImage.width = 200;
