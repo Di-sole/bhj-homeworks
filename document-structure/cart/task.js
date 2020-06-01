@@ -1,3 +1,5 @@
+'use strict'
+
 const quantityControls = document.querySelectorAll('.product__quantity-control');
 const addProductBtns = document.querySelectorAll('.product__add');
 const cartProducts = document.querySelector('.cart__products');
@@ -22,7 +24,6 @@ function addProduct() {
 
     if (productInCart) {
         const productInCartQuantity = productInCart.querySelector('.cart__product-count');
-        
         productInCartQuantity.textContent = parseInt(productInCartQuantity.textContent) + parseInt(newProductQuantity);
     } else {
         const newProduct = document.createElement('div');
