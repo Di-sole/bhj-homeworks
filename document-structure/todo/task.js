@@ -5,9 +5,9 @@ const form = document.querySelector('.tasks__control');
 const inputField = document.getElementById('task__input');
 
 function addTask(event) {
+    event.preventDefault();
+    
     if (inputField.value != '') {
-        event.preventDefault();
-
         const task = document.createElement('div');
         task.className = 'task';
         task.innerHTML = `

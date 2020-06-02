@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', () => {
 textEditor.addEventListener('input', () => localStorage.text = textEditor.value);
 
 clearButton.addEventListener('click', (e) => {
-    e.preventDefault();
     textEditor.value = '';
     delete localStorage.text;
 })
